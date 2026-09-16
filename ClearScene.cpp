@@ -1,5 +1,7 @@
 #include "ClearScene.h"
 #include "Engine/Image.h"
+#include "Engine/Input.h"
+#include "Engine/SceneManager.h"
 
 ClearScene::ClearScene(GameObject* parent)
 	: GameObject(parent, "ClearScene"), hClearPic_(-1)
@@ -14,6 +16,10 @@ void ClearScene::Initialize()
 
 void ClearScene::Update()
 {
+	if (Input::IsKeyDown(DIK_SPACE)) {
+		SceneManager* pSceneManager = (SceneManager*)(this->GetParent());
+		pSceneManager->ChangeScene(SCENE_ID_TEST);
+	}
 }
 
 void ClearScene::Draw()

@@ -12,7 +12,7 @@ TestScene::TestScene(GameObject* parent)
 //初期化
 void TestScene::Initialize()
 {
-	hTitlePic_ = Image::Load("dezain.png");
+	hTitlePic_ = Image::Load("Title.png");
 }
 
 //更新
@@ -29,7 +29,7 @@ void TestScene::Update()
 //描画
 void TestScene::Draw()
 {
-	transform_.scale_ = { 1.3f, 1.3f, 1.0f };//画像の大きさを変更
+	transform_.scale_ = { 1.0f, 1.0f, 1.0f };//画像の大きさを変更
 	Image::SetTransform(hTitlePic_, transform_);//画像の位置や向きなどを設定
 	Image::Draw(hTitlePic_);//画像を表示
 }

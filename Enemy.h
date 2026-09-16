@@ -15,6 +15,11 @@ public:
 	//開放
 	void Release() override;
 	void OnCollision(GameObject* pTarget) override;
+	void SetPosition(XMFLOAT3 pos);
 private:
 	int hModel_;//モデルのハンドル
+	float time_;
+	XMFLOAT3 basePosition_;
+	float amplitude_;//揺れ幅
+	float speed_;//揺れる速さ
 };

@@ -12,7 +12,9 @@ public:
 	void Update() override;//更新
 	void Draw() override;//描画
 	void Release() override;//開放
+	void OnEnemyKilled();
 private:
 	int hModel_;//モデルのハンドル
 	bool gameStarted_;
+	int enemyCount_;
 };
